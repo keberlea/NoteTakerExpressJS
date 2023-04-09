@@ -1,5 +1,10 @@
+//require express, fs, and id-16
+const express = require("express");
+const fs = require("fs");
+const id = require("id-16");
+
 // GET /notes read the db.json file and return all saved notes as JSON.
-app.get("/api/notes", function(req, res) {
+app.get("/api/notes",  function(req, res) {
     fs.readFile("db/db.json", "utf8", function(err, data) {
         if (err) throw err;
         res.json(JSON.parse(data));
