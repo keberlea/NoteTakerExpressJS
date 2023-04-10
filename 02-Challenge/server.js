@@ -2,7 +2,7 @@
 const express = require("express");
 
 //import html.js and api.js
- const html = require("./routes/html");
+const html = require("./routes/html");
 const api = require("./routes/api");
 
 //create express app
@@ -21,9 +21,9 @@ app.use(express.json());
 app.use(express.static("public"));
 
 //set up express app to use html.js and api.js
-app.use("/", html);
+app.use(html);
 
-app.use("/api", api);
+app.use(api);
 
 //start server
 app.listen(PORT, () => {
