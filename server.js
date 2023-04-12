@@ -29,6 +29,6 @@ app.use(api)
 
 //start server
 app.listen(PORT, () => {
-    console.log(`App listening on PORT: ${PORT}`)
+    console.log(`Note taker app listening on PORT: ${PORT}`)
     }
 );
