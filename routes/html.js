@@ -11,7 +11,7 @@ html.get("/", (req, res) => {
 
 
 //sends user to notes.html when they visit /notes page
-html.get("/", (req, res) => {  
+html.get("/notes", (req, res) => {  
     res.sendFile(path.join(__dirname, "/assets/notes.html"));
 });
 
