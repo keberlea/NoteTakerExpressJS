@@ -31,9 +31,9 @@ apiNotes.post('/api/notes', (req, res) => {
 //function to delete note from db.json file
 apiNotes.delete("/api/notes/:id", (req, res) => {
     const deleteID = req.params.id.toString()
-    const data = JSON.parse(fs.readFileSync('./db/db.json','utf8'))
+    const data = JSON.parse(fs.readFileSync('db/db.json','utf8'))
     const newData = data.filter(note => note.id.toString() !== deleteID)
-    fs.writeFileSync('./db/db.json', JSON.stringify(newData))
+    fs.writeFileSync('db/db.json', JSON.stringify(newData))
     res.json(newData)
 })
 
