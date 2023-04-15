@@ -6,13 +6,13 @@ const path = require("path");
 
 // sends user to html file 
 html.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "/assets/index.html"));
+    res.sendFile(path.join(__dirname, "../public/index.html"));
 });
 
 
 //sends user to notes.html when they visit /notes page
-html.get("/", (req, res) => {  
-    res.sendFile(path.join(__dirname, "/assets/notes.html"));
+html.get("/notes", (req, res) => {  
+    res.sendFile(path.join(__dirname, "../public/notes.html"));
 });
 
 //export html router object

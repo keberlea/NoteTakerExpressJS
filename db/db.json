@@ -1,6 +1,1 @@
-[
-    {
-        "title":"Test Title",
-        "text":"Test text"
-    }
-]
+[{"title":"Hello","text":"Welcome to my note taker app. See next note","id":"gg138hwtkmgxmdisyyb7"},{"title":"Add a Note","text":"Add a note by selecting the plus sign icon in the top right corner. \n\nTo save the note click the save icon in the top right corner.","id":"3j6je4glw10rr40eltur"},{"title":"Delete a Note","text":"To delete a note, press the red garbage can next to the saved note on the left side of the screen.","id":"n49zmgitinqd1kw39wsk"},{"title":"Demo 1","text":"This is a demo note used to show that only one note is deleted at a time.","id":"eeklsmo4jitoj7ydmsk1"}]
