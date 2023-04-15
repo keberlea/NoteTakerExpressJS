@@ -4,10 +4,7 @@ const fs = require('fs')
 //const id_16 = require('id-16')
 
 const generateUniqueId = require('generate-unique-id');
-generateUniqueId({
-    length: 32,
-    useLetters: false
-});
+const id = generateUniqueId();
 
 
 
@@ -24,7 +21,7 @@ apiNotes.post('/api/notes', (req, res) => {
     const newNote = {
         title: req.body.title,
         text: req.body.text,
-        id: generateUniqueId(), 
+        id: id,
     };
 
     data.push(newNote)
@@ -39,9 +36,10 @@ apiNotes.post('/api/notes', (req, res) => {
 //function to delete note from db.json file
 
 apiNotes.delete("/api/notes/:id", (req, res) => {
-    const deleteID = req.params.id.toString()
+    const deleteID = req.params.id
     const data = JSON.parse(fs.readFileSync('db/db.json','utf8'))
-    const newData = data.filter(note => note.id.toString() !== deleteID)
+    //delete note is deleteID ===note.id
+    const newData = data.filter(note => note.id == deleteID)
     fs.writeFileSync('./db/db.json', JSON.stringify(newData))
     res.json(newData)
 })
